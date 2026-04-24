@@ -25,6 +25,9 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install requests
+        run: pip install requests
+
       - name: Run download script
         run: python download.py "${{ github.event.inputs.file_url }}" "${{ github.event.inputs.folder_name }}"
 
